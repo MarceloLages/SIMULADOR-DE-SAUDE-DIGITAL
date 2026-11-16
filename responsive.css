@@ -1,0 +1,37 @@
+/* Ajustes mobile-first para tablets, celulares e telas amplas. */
+@media (max-width: 900px) {
+  .hero { grid-template-columns:1fr .45fr; padding:28px; }
+  .hero-art { height:145px; }
+  .dashboard-grid { grid-template-columns:1fr; }
+}
+@media (max-width: 620px) {
+  .topbar { min-height:64px; padding:10px 4%; }
+  .brand { font-size:.93rem; gap:8px; }
+  .brand img { width:35px; height:35px; }
+  .curriculum-tag { display:none; }
+  .theme-label { display:none; }
+  .page-shell { width:92%; margin:20px auto 42px; }
+  .hero { display:block; padding:25px 22px; border-radius:18px; }
+  .hero h1 { font-size:1.8rem; }
+  .hero-copy > p { font-size:.88rem; }
+  .hero-art { display:none; }
+  .section-heading { align-items:flex-start; flex-direction:column; margin-top:27px; gap:9px; }
+  .section-heading h2 { font-size:1.3rem; }
+  .panel { padding:19px 16px; border-radius:15px; }
+  .panel-heading { gap:10px; margin-bottom:18px; }
+  .heading-icon { width:34px; height:34px; flex-basis:34px; }
+  .metrics-grid { gap:7px; }
+  .metric-card { padding:12px 4px 10px; }
+  .metric-card strong { font-size:1.3rem; }
+  .metric-card span:last-child { font-size:.62rem; }
+  .legend-row { align-items:flex-start; flex-direction:column; gap:7px; }
+  .reflection-grid { grid-template-columns:1fr; gap:15px; }
+  .reflection-footer { align-items:stretch; }
+  .button-row { width:100%; }
+  .button-row .button { flex:1 1 100%; }
+  .report-header { align-items:flex-start; }
+  .report-mark { white-space:nowrap; }
+  .report-actions .button { flex:1 1 100%; }
+  .footer-inner { align-items:flex-start; flex-direction:column; gap:8px; }
+  .footer-inner .credits { margin-left:0; }
+}

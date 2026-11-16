@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10243f">
+  <meta name="description" content="Simulador educativo para autoavaliação dos hábitos tecnológicos e reflexão sobre saúde digital.">
+  <title>Simulador de Tempo de Tela e Saúde Digital</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Página inicial do Simulador">
+      <img src="assets/images/logo.png" alt="" width="42" height="42">
+      <span>Saúde <strong>Digital</strong></span>
+    </a>
+    <div class="top-actions">
+      <span class="curriculum-tag">Cultura Digital · EM13CO24</span>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Ativar tema escuro" title="Alternar tema">
+        <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg>
+        <span class="theme-label">Tema</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">AUTOCONHECIMENTO • BEM-ESTAR • TECNOLOGIA</span>
+        <h1 id="hero-title">Simulador de Tempo de Tela e Saúde Digital</h1>
+        <p>Como você distribui seu tempo conectado? Explore seus hábitos, observe os resultados e reflita sobre escolhas que podem tornar sua relação com a tecnologia mais saudável.</p>
+        <div class="hero-meta">
+          <span class="meta-dot"></span>
+          <span>Uma atividade de autoavaliação — não é um diagnóstico clínico.</span>
+        </div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Ilustração de dispositivos digitais, relógio e bem-estar">
+        <img src="assets/images/banner.jpg" alt="">
+      </div>
+    </section>
+
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">PAINEL DE AUTOAVALIAÇÃO</span>
+        <h2>Seus hábitos digitais</h2>
+        <p>Ajuste os controles considerando sua média diária.</p>
+      </div>
+      <span class="live-status"><span></span> Atualização em tempo real</span>
+    </div>
+
+    <section class="dashboard-grid" aria-label="Simulador e resultados">
+      <article class="panel habits-panel">
+        <div class="panel-heading">
+          <div class="heading-icon">⌁</div>
+          <div><h3>1. Rotina diária</h3><p>Quanto tempo você dedica a cada atividade?</p></div>
+        </div>
+
+        <div class="range-field">
+          <div class="range-top"><label for="estudo">Estudos, pesquisas e tarefas</label><output id="val-estudo" for="estudo">2,0 h</output></div>
+          <input type="range" id="estudo" min="0" max="8" step="0.5" value="2">
+          <div class="range-hints"><span>0 h</span><span>8 h</span></div>
+          <p class="field-help">Atividades escolares, leitura digital ou cursos.</p>
+        </div>
+
+        <div class="range-field">
+          <div class="range-top"><label for="redes">Redes sociais e mensagens</label><output id="val-redes" for="redes">2,5 h</output></div>
+          <input type="range" id="redes" min="0" max="10" step="0.5" value="2.5">
+          <div class="range-hints"><span>0 h</span><span>10 h</span></div>
+          <p class="field-help">Instagram, TikTok, WhatsApp, vídeos curtos etc.</p>
+        </div>
+
+        <div class="range-field">
+          <div class="range-top"><label for="lazer">Jogos digitais, séries e vídeos</label><output id="val-lazer" for="lazer">1,5 h</output></div>
+          <input type="range" id="lazer" min="0" max="10" step="0.5" value="1.5">
+          <div class="range-hints"><span>0 h</span><span>10 h</span></div>
+          <p class="field-help">Entretenimento, streamings e jogos online ou offline.</p>
+        </div>
+
+        <div class="range-field sleep-field">
+          <div class="range-top"><label for="sono">Uso de telas antes de dormir</label><output id="val-sono" for="sono">45 min</output></div>
+          <input type="range" id="sono" min="0" max="180" step="15" value="45">
+          <div class="range-hints"><span>0 min</span><span>180 min</span></div>
+          <p class="field-help">Tempo conectado já deitado ou na última hora antes do sono.</p>
+        </div>
+        <p class="privacy-note"><span aria-hidden="true">▣</span> Seus dados ficam salvos somente neste dispositivo.</p>
+      </article>
+
+      <article class="panel results-panel" aria-live="polite">
+        <div class="panel-heading">
+          <div class="heading-icon result-icon">↗</div>
+          <div><h3>2. Impacto no tempo</h3><p>Veja a projeção dos seus hábitos.</p></div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card"><span class="metric-symbol">◷</span><strong id="total-dia">6,0h</strong><span>Por dia</span></div>
+          <div class="metric-card"><span class="metric-symbol">▦</span><strong id="total-semana">42,0h</strong><span>Por semana</span></div>
+          <div class="metric-card"><span class="metric-symbol">◴</span><strong id="dias-ano">91</strong><span>Dias inteiros/ano</span></div>
+        </div>
+
+        <div class="distribution">
+          <div class="distribution-heading"><h4>Distribuição do tempo</h4><span>Estudo × recreação</span></div>
+          <div class="legend-row">
+            <span><i class="legend-dot productive"></i>Estudo <strong id="pct-produtivo">33%</strong></span>
+            <span><i class="legend-dot leisure"></i>Redes + lazer <strong id="pct-lazer">67%</strong></span>
+          </div>
+          <div class="progress-track" role="img" aria-label="Distribuição percentual entre estudo e atividades recreativas">
+            <div class="bar-produtivo" id="bar-produtivo" style="width:33%"></div>
+            <div class="bar-lazer" id="bar-lazer" style="width:67%"></div>
+          </div>
+        </div>
+
+        <div id="feedback-box" class="feedback-box">
+          <div class="feedback-top"><span class="feedback-indicator" aria-hidden="true"></span><strong id="feedback-titulo">Uso Equilibrado</strong></div>
+          <p id="feedback-texto">Carregando análise...</p>
+        </div>
+        <div id="sleep-alert" class="sleep-alert" hidden>
+          <span class="sleep-icon" aria-hidden="true">☾</span>
+          <div><strong>Atenção ao sono</strong><p>O uso de telas antes de dormir pode manter o cérebro em estado de alerta e prejudicar a qualidade do descanso. Experimente criar um intervalo sem telas antes de deitar.</p></div>
+        </div>
+        <p class="method-note">As classificações são referências educativas definidas para esta atividade e não substituem avaliação profissional.</p>
+      </article>
+    </section>
+
+    <section class="panel reflection-panel" aria-labelledby="reflection-title">
+      <div class="panel-heading">
+        <div class="heading-icon reflection-icon">✎</div>
+        <div><span class="section-kicker">PROBLEMATIZAÇÃO</span><h3 id="reflection-title">3. Questões para refletir</h3><p>Use os resultados como ponto de partida para pensar criticamente.</p></div>
+      </div>
+      <div class="reflection-grid">
+        <div class="question-item"><label for="q1"><span>01</span> Olhando para a projeção de dias inteiros por ano nas telas, o que mais te surpreendeu? Que atividades fora das telas podem estar perdendo espaço?</label><textarea id="q1" rows="3" placeholder="Escreva sua reflexão aqui..."></textarea></div>
+        <div class="question-item"><label for="q2"><span>02</span> Como o tempo dedicado às redes sociais influencia sua autoestima, seu foco ou a comparação social com outras pessoas?</label><textarea id="q2" rows="3" placeholder="Escreva sua reflexão aqui..."></textarea></div>
+        <div class="question-item"><label for="q3"><span>03</span> O excesso de tempo conectado depende apenas da força de vontade ou as plataformas são projetadas para prender nossa atenção?</label><textarea id="q3" rows="3" placeholder="Escreva sua reflexão aqui..."></textarea></div>
+        <div class="question-item"><label for="q4"><span>04</span> Cite uma atitude prática que você pode adotar nesta semana para tornar sua relação com as tecnologias mais saudável.</label><textarea id="q4" rows="3" placeholder="Ex.: desativar notificações durante os estudos..."></textarea></div>
+      </div>
+      <div class="reflection-footer">
+        <p><span aria-hidden="true">✦</span> Suas respostas ajudam a transformar dados em escolhas conscientes.</p>
+        <div class="button-row">
+          <button id="generate-report" class="button button-primary" type="button"><span aria-hidden="true">▤</span> Gerar ficha diagnóstica</button>
+          <button id="reset-simulation" class="button button-quiet" type="button">↺ Reiniciar simulação</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="report-section" class="panel report-panel" hidden aria-labelledby="report-title">
+      <div class="report-header">
+        <div><span class="section-kicker">REGISTRO DA ATIVIDADE</span><h3 id="report-title">Ficha diagnóstica — Cultura Digital</h3><p>Confira o resumo da sua autoavaliação.</p></div>
+        <span class="report-mark">EM13CO24</span>
+      </div>
+      <pre id="resumo-gerado" class="report-content"></pre>
+      <div class="button-row report-actions">
+        <button id="copy-report" class="button button-primary" type="button">▣ Copiar relatório</button>
+        <button id="print-report" class="button button-outline" type="button">⇩ Exportar / salvar PDF</button>
+      </div>
+      <p id="copy-status" class="status-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="assets/images/logo.png" alt="" width="34" height="34"><span>Saúde Digital</span></div>
+      <p>Projeto educacional de Cultura Digital · Habilidade BNCC EM13CO24</p>
+      <p class="credits">Desenvolvimento pedagógico e tecnológico para uso em atividades escolares.</p>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
